@@ -2,7 +2,7 @@
 
 # Analise inicial do candidato a exoplaneta TIC 38965512 com dados do TESS (Google Colab)
 
-Este repositório contém um notebook Python desenvolvido para ser executado inteiramente no **Google Colab**. Ainda é possível executá-lo em outro ambiente que tenha linguagem de programação Python.
+Este repositório contém um notebook Python desenvolvido para ser executado inteiramente no **Google Colab**. Ainda é possível executá-lo em outro ambiente que tenha linguagem de programação Python, para isso basta copiar cada rotina e executa-las em ordem.
 
 ## Sobre o Projeto
 

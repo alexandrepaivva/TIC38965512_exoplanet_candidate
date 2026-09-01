@@ -1,112 +1,36 @@
-﻿\## Sobre o Projeto
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SEU_USUARIO/TIC38965512_Colab_Exoplanet/blob/main/analise_TIC38965512.ipynb)
 
+# Detecção de exoplaneta TIC 38965512 com dados do TESS (Google Colab)
 
+Este repositório contém um notebook Python desenvolvido para ser executado inteiramente no **Google Colab**.
 
-Este projeto implementa uma rotina de análise inicial de dados fotométricos do satélite \*\*TESS (Transiting Exoplanet Survey Satellite)\*\* para a detecção e caracterização de um candidato a exoplaneta orbitando a estrela \*\*TIC 38965512\*\*.
+## Sobre o Projeto
 
+O notebook baixa os dados do satélite TESS (setor 96), aplica o método **Box Least Squares (BLS)** para estimar o período orbital do candidato, calcula o raio planetário e o semi-eixo maior, e propaga as incertezas.
 
+## Como executar
 
-\### Objetivos
+1. Clique no botão **"Open In Colab"** acima.
+2. Execute as células em ordem (Shift + Enter).
+3. Os gráficos e resultados serão gerados diretamente no ambiente do Colab.
 
+## Dependências
 
+Todas as bibliotecas são instaladas automaticamente pela primeira célula do notebook.
 
-\- Baixar e tratar a curva de luz da estrela-alvo a partir do arquivo do MAST (setor 96, autor SPOC).
+## Resultados esperados
 
-\- Remover valores nulos (NaNs) e outliers (5σ) para limpeza dos dados.
+Ao final da execução, serão exibidos no terminal do Colab:
+- Período orbital (P) em dias.
+- Raio do planeta em Raios de Júpiter e Raios da Terra.
+- Semi-eixo maior (a) em Unidades Astronômicas (UA).
+- Incertezas propagadas para o raio e semi-eixo maior.
 
-\- Aplicar o algoritmo \*\*Box Least Squares (BLS)\*\* para estimar o período orbital, duração do trânsito, época e profundidade.
+Além disso, três gráficos serão salvos e exibidos:
+- Curva de Luz Tratada
+- Periodograma BLS
+- Curva de Luz Dobrada (Folded)
 
-\- Gerar gráficos da curva de luz tratada, periodograma BLS e curva de luz dobrada (folded).
+---
 
-\- Estimar o raio do planeta (em Raios de Júpiter e da Terra) e o semi-eixo maior (em UA) a partir dos parâmetros estelares assumidos (`R\_star = 1.0785 R☉` e `M\_star = 1.01 M☉`).
-
-\- Propagar as incertezas estelares para o raio planetário e semi-eixo maior (com valores de erro superior e inferior).
-
-
-
-\### Metodologia
-
-
-
-1\. \*\*Obtenção dos dados\*\*: Utilização da biblioteca `lightkurve` para acessar os dados da missão TESS via MAST.
-
-2\. \*\*Pré-processamento\*\*: Normalização do fluxo, remoção de NaNs e corte estatístico de outliers.
-
-3\. \*\*Periodograma BLS\*\*: Varredura em uma grade logarítmica de períodos (1 a 15 dias) e múltiplas durações de trânsito (0,02 a 0,3 dias) para encontrar a melhor solução.
-
-4\. \*\*Caracterização Física\*\*: Cálculo do raio planetário (`R\_p = √profundidade × R\_star`) e semi-eixo maior pela 3ª Lei de Kepler.
-
-5\. \*\*Propagação de Incertezas\*\*: Derivadas parciais aplicadas para calcular os erros assimétricos (+ e -) das grandezas derivadas.
-
-
-
-\### Resultados Obtidos (para TIC 38965512)
-
-
-
-Ao executar o script, os seguintes parâmetros são calculados e exibidos no terminal:
-
-
-
-\- \*\*Período orbital (P)\*\*: \~X.XXXX dias (valor exato depende da execução do BLS)
-
-\- \*\*Raio do planeta\*\*: \~X.XXX R\_júpiter (\~XX.XX R\_terra)
-
-\- \*\*Semi-eixo maior (a)\*\*: \~X.XXXX UA
-
-\- Incertezas propagadas para o raio e semi-eixo maior.
-
-
-
-\### Gráficos Gerados
-
-
-
-\- `curva\_luz\_tratada\_TIC\_38965512.png`
-
-\- `periodograma\_BLS\_TIC\_38965512.png`
-
-\- `curva\_de\_luz\_dobrada\_TIC\_38965512.png`
-
-
-
-\### Dependências
-
-
-
-\- Python 3.7+
-
-\- lightkurve
-
-\- numpy
-
-\- pandas
-
-\- matplotlib
-
-\- astropy
-
-
-
-\### Como Executar
-
-
-
-```bash
-
-\# Clone o repositório
-
-git clone https://github.com/alexandrepaivva/TIC38965512\_exoplanet\_candidate.git
-
-
-
-\# Instale as dependências
-
-pip install -r requirements.txt
-
-
-
-\# Execute o script
-
-python bls\_analysis\_TIC38965512.py
-
+**Contexto:** Trabalho acadêmico de análise de dados astronômicos.

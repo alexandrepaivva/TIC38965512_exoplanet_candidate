@@ -1,4 +1,4 @@
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github.com/alexandrepaivva/TIC38965512_exoplanet_candidate/blob/main/TIC38965512_Colab_Exoplanet.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/alexandrepaivva/TIC38965512_exoplanet_candidate/blob/main/TIC38965512_Colab_Exoplanet.ipynb)
 
 # Analise inicial do candidato a exoplaneta TIC 38965512 com dados do TESS (Google Colab)
 

@@ -1,6 +1,6 @@
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SEU_USUARIO/TIC38965512_Colab_Exoplanet/blob/main/analise_TIC38965512.ipynb)
 
-# Detecção de exoplaneta TIC 38965512 com dados do TESS (Google Colab)
+# Analise inicial do candidato a exoplaneta TIC 38965512 com dados do TESS (Google Colab)
 
 Este repositório contém um notebook Python desenvolvido para ser executado inteiramente no **Google Colab**.
 

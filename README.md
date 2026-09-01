@@ -31,6 +31,14 @@ Além disso, três gráficos serão salvos e exibidos:
 - Periodograma BLS
 - Curva de Luz Dobrada (Folded)
 
+## Análise de outras estrelas
+Para reproduzir a análise em outras estrelas, basta substituir onde está indicado no código.
+- Rotina 2: substituir o número do TIC_ID em "TIC_ID = "38965512"", retirar "38965512" e colocar dentro das aspas o número do TIC_ID da estrela que se deseja analisar.
+- Rotina 3: substituir o número "96" que corresponde ao setor analisado, por um dos setores que deseja ser analisado da estrela, em "sector=96".
+- Rotina 5: retirar o delimitador do eixo X - "plt.xlim(-0.4, 0.4)".
+- Rotina 6: substituir os valores de raio e massa da estrela pelo valores de raio e massa da estrela que se deseja analisar, em "R_star = 1.0785 * R_sun" e "M_star = 1.01 * M_sun".
+- Rotina 7: substituir as incertezas do raio e da massa estelar pelas incertezas da estrela que se deseja analisar, em "R_star_err_plus  = 0 * R_sun" erro para cima, "R_star_err_minus = 0 * R_sun erro para baixo" e "M_star_err_plus  = 0 * M_sun" erro para cima, "M_star_err_minus = 0 * M_sun erro para baixo".
+
 ---
 
 **Contexto:** Trabalho acadêmico de análise de dados astronômicos.
